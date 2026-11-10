@@ -39,10 +39,10 @@ jobs:
 
       - name: Publish one unique exercise
         env:
-          VK_ACCESS_TOKEN: \${{ secrets.VK_ACCESS_TOKEN }}
-          VK_GROUP_ID: \${{ secrets.VK_GROUP_ID }}
-          GITHUB_EVENT_NAME: \${{ github.event_name }}
-          GITHUB_EVENT_SCHEDULE: \${{ github.event.schedule }}
+          VK_ACCESS_TOKEN: ${{ secrets.VK_ACCESS_TOKEN }}
+          VK_GROUP_ID: ${{ secrets.VK_GROUP_ID }}
+          GITHUB_EVENT_NAME: ${{ github.event_name }}
+          GITHUB_EVENT_SCHEDULE: ${{ github.event.schedule }}
         run: python main.py
 
       - name: Save publication history
